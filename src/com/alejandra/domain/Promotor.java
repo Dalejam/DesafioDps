@@ -1,9 +1,10 @@
 package com.alejandra.domain;
 
 public class Promotor extends Empleado{
+
     private int volantesRepartido;
     private long valorVolante;
-    private int comprasVolante;
+    private int comprasVolante ;
 
     public Promotor(String nombre, int volantesRepartido, long valorVolante, int comprasVolante) {
         super(nombre);
@@ -35,7 +36,7 @@ public class Promotor extends Empleado{
     @Override
     public long calcularSalario() {
 
-        return (this.valorVolante*this.volantesRepartido)+(this.comprasVolante);
+        return (this.valorVolante*this.volantesRepartido)+(this.comprasVolante*15000);
     }
 
 

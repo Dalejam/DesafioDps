@@ -23,7 +23,7 @@ public class Directo extends Empleado{
     }
     public long calcularSalud(){
 
-        return (long) (this.salario*0.5);
+        return (long) (this.salario*0.05);
     }
     public long calcularPension(){
 

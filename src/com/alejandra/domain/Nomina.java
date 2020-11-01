@@ -1,10 +1,15 @@
 package com.alejandra.domain;
 
 import javax.swing.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Nomina {
     private List<Empleado> empleado;
+
+    public Nomina() {
+        this.empleado = new ArrayList<>();
+    }
 
     public List<Empleado> getEmpleado() {
         return empleado;
@@ -24,7 +29,7 @@ public class Nomina {
     public void listarDirecto(){
         empleado.forEach(directo->{
             if(directo instanceof Directo) {
-                System.out.println(directo);
+                System.out.println("El salario de empleado con contrato indefinido es: "+directo.calcularSalario());
             }
         });
 
@@ -33,16 +38,16 @@ public class Nomina {
         empleado.forEach(freelancers->{
             if(freelancers instanceof Freelance)
             {
-                System.out.println(freelancers);
+                System.out.println("El salario de empleado con contrato Freelance es: "+freelancers.calcularSalario());
             }
         });
 
     }
     public void listarPromotores(){
-        empleado.forEach(freelancers->{
-            if(freelancers instanceof Freelance)
+        empleado.forEach(promotor->{
+            if(promotor instanceof Promotor)
             {
-                System.out.println(freelancers);
+                System.out.println("El salario de empleado con contrato Promotores es : "+promotor.calcularSalario());
             }
         });
 
